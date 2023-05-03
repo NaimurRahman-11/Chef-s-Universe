@@ -19,6 +19,9 @@ const HomePage = () => {
 
   return (
 
+
+    //Banner Section
+
     <div className="container">
       <div className="row">
         <div className="col-12 col-md-6 d-flex align-items-center justify-content-center mb-4 mt-5 mb-md-0 ">
@@ -33,6 +36,7 @@ const HomePage = () => {
         </div>
       </div>
 
+      
       
       <h1 className="text-center mt-5">Meet Our Chef's</h1>
       <div className="d-flex justify-content-center mt-5">
@@ -60,7 +64,7 @@ const HomePage = () => {
       </div>
 
 
-      <div className="rounded bg-light text-center mt-5">
+      <div className="rounded bg-light text-center mt-5 p-3">
         <h1>Our Partners</h1>
         <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, nostrum. Ipsam quas et at explicabo quod temporibus cum dolorem reprehenderit.</small>
         <div className="d-flex justify-content-center align-items-center">
