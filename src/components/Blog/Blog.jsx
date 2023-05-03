@@ -1,6 +1,5 @@
 import React, { createRef } from "react";
-import ReactDOM from "react-dom";
-import Pdf from "react-to-pdf";
+
 import "./Blog.css";
 
 
@@ -15,13 +14,11 @@ const Blog = () => {
 
     return (
         <div className="App container mt-5 mb-5">
-            {/* <Pdf targetRef={ref} filename="code-example.pdf">
-                {({ toPdf }) => <button className="btn btn-primary no-printme " onClick={toPdf}>Generate Pdf</button>}
-            </Pdf> */}
+           
             <button className="btn btn-primary no-printme" onClick={createPdf}>Generate Pdf</button>
             <div className="printme">
                 <h1>Hello Users!</h1>
-                <p>Hi this is a simple text to test.</p>
+                <p>Cooking is the first priority of a chef.</p>
 
             </div>
 

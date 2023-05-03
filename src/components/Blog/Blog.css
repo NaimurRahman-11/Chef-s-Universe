@@ -4,7 +4,7 @@
 
 @media print {
     body {
-        font-family: 'Certificate Italic', 'Edwardian Script ITC', 'Arial Black';
+        font-family: 'Inter', sans-serif;
     }
 
     .no-printme {
