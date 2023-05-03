@@ -11,7 +11,7 @@ export default function ErrorPage() {
       <p>
         <i>{error.statusText || error.message}</i>
       </p>
-      <img src="https://as1.ftcdn.net/v2/jpg/02/57/71/98/500_F_257719878_3P2CksRfwUfIIyLZkL8iKBzVNN5yeGZY.jpg" alt="" className="rounded" />
+      <img src="https://as1.ftcdn.net/v2/jpg/02/57/71/98/500_F_257719878_3P2CksRfwUfIIyLZkL8iKBzVNN5yeGZY.jpg" alt="" className="rounded img-fluid" />
     </div>
   );
 }

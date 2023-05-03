@@ -60,6 +60,25 @@ const HomePage = () => {
       </div>
 
 
+      <div className="rounded bg-light text-center mt-5">
+        <h1>Our Partners</h1>
+        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, nostrum. Ipsam quas et at explicabo quod temporibus cum dolorem reprehenderit.</small>
+        <div className="d-flex justify-content-center align-items-center">
+          <div className="row">
+            <div className="col">
+              <img src="https://c.ekstatic.net/ecl/logos/skywards/partners/le-meridien-logo-275x175.png" alt="" />
+              
+            </div>
+            <div className="col">
+            <img src="https://c.ekstatic.net/ecl/logos/skywards/partners/le-meridien-logo-275x175.png" alt="" />
+            </div>
+          </div>
+          
+         
+        </div>
+
+      </div>
+
 
 
       <section className="container mt-5 mb-5">
