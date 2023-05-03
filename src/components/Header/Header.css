@@ -1,0 +1,21 @@
+.logo{
+    height: 70px;
+    width: 70px;
+}
+
+.myColor:hover{
+    color: blueviolet;
+}
+
+.active {
+     color: blueviolet;
+
+    border-bottom: 3px solid blueviolet;
+    
+}
+
+.photoURL{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}

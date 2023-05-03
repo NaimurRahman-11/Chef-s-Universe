@@ -1,0 +1,18 @@
+.card {
+    width: 18rem;
+    
+
+  }
+
+  .cardCenter{
+    margin: 0 auto;
+  }
+
+
+.card-img-top{
+height: 20rem;
+}
+
+.size{
+    height: 250px;
+}
