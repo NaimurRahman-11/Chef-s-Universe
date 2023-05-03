@@ -3,7 +3,7 @@ import { useLoaderData, useParams } from 'react-router-dom';
 import "./ViewRecipes.css";
 import Swal from 'sweetalert2';
 import Rating from 'react-rating';
-import { FaHandPointUp, FaRegStar, FaStar, FaThumbsUp, FaUtensils } from 'react-icons/fa';
+import { FaRegStar, FaStar } from 'react-icons/fa';
 
 
 const ViewRecipes = () => {
@@ -34,9 +34,9 @@ const ViewRecipes = () => {
           <div className="text-center">
                         <h1 className="mb-4">{firstRecipe.name }</h1>
                         <small className="d-block mb-4">{firstRecipe.bio}</small>
-                        <p> <FaThumbsUp></FaThumbsUp> Total Likes: {firstRecipe.Likes}</p>
-                        <p> <FaUtensils></FaUtensils> No. of recipes: {firstRecipe.NoOfRecipes}</p>
-                        <p> <FaStar></FaStar> Years of experince: { firstRecipe.experience}</p>
+                        <p>Total Likes: {firstRecipe.Likes}</p>
+                        <p>No. of recipes: {firstRecipe.NoOfRecipes}</p>
+                        <p>Years of experince: { firstRecipe.experience}</p>
             
           </div>
         </div>
