@@ -2,8 +2,10 @@
 import { Link, useLocation } from 'react-router-dom';
 import "./Header.css";
 import { FaUserCircle } from 'react-icons/fa';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { AuthContext } from '../Providers/AuthProvider';
+
+
 
 const Header = () => {
 
@@ -17,6 +19,15 @@ const Header = () => {
     console.log(user)
 
     const location = useLocation();
+
+
+    // Initialize tooltips on page load
+    useEffect(() => {
+        document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((tooltip) => {
+            new bootstrap.Tooltip(tooltip);
+        });
+    }, []);
+
     return (
         <div className=''>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -38,9 +49,10 @@ const Header = () => {
                             </li>
                         </ul>
                         <div>
-                            {user ? user.photoURL ?
-                                <img src={user.photoURL} alt="" className='photoURL me-3' />
-                                : <FaUserCircle className='me-3 photoURL'></FaUserCircle> : null}
+                        {user ? user.photoURL ?
+    <img src={user.photoURL} alt="" className='photoURL me-3' data-bs-toggle="tooltip" data-bs-placement="bottom" title={user.displayName} />
+    : <FaUserCircle className='me-3 photoURL' data-bs-toggle="tooltip" data-bs-placement="bottom" title={user.email}></FaUserCircle> : null}
+
                         </div>
                         {user ?
                             <Link to=""><button onClick={handleLogOut} className="btn btn-outline-primary" type="submit">Log Out</button></Link> :
