@@ -15,37 +15,47 @@ import AboutUs from './components/AboutUs/AboutUs';
 import ViewRecipes from './components/ViewRecipes/ViewRecipes';
 import AuthProvider from './components/Providers/AuthProvider';
 import PrivateRoute from './components/Routes/PrivateRoute';
+import ErrorPage from './components/ErrorPage/error-page';
+
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
         element: <HomePage></HomePage>,
+        errorElement: <ErrorPage></ErrorPage>
+        
       },
 
       {
         path: '/login',
         element: <Login></Login>,
+        errorElement: <ErrorPage></ErrorPage>
       },
 
       {
         path: '/blog',
         element: <Blog></Blog>,
+        errorElement: <ErrorPage></ErrorPage>
       },
       {
         path: '/register',
         element: <Register></Register>,
+        errorElement: <ErrorPage></ErrorPage>
       },
       {
         path: '/about',
         element: <AboutUs></AboutUs>,
+        errorElement: <ErrorPage></ErrorPage>
       },
       {
         path: '/chef/:id',
         element: <PrivateRoute><ViewRecipes></ViewRecipes></PrivateRoute>,
+        errorElement: <ErrorPage></ErrorPage>,
         loader: ({ params }) => fetch(`https://chef-recipes-server-naimurrahman-11.vercel.app/chef/${params.id}`)
       },
     ]

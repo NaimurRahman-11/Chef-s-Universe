@@ -1,5 +1,6 @@
 .card {
-    width: 18rem;
+    width: 19rem;
+    height: 70vh;
     
 
   }
@@ -10,7 +11,7 @@
 
 
 .card-img-top{
-height: 20rem;
+height: 18rem;
 }
 
 .size{

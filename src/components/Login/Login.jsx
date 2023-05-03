@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProvider';
 import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
@@ -11,6 +11,8 @@ const Login = () => {
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
 
+  const [errorMessage, setErrorMessage] = useState('');
+
   const handleGoogleSignIn = () => {
     signInWithPopup(auth, googleProvider)
       .then(result => {
@@ -19,7 +21,9 @@ const Login = () => {
         navigate(from, { replace: true });
       })
       .catch(error => {
-        console.log(error);
+        const errorMessage = error.message; // extract error message
+      console.log(errorMessage);
+      setErrorMessage(errorMessage); // set error message in state
       })
   }
 
@@ -31,7 +35,9 @@ const Login = () => {
         navigate(from, { replace: true });
       })
       .catch(error => {
-        console.log(error);
+        const errorMessage = error.message; // extract error message
+      console.log(errorMessage);
+      setErrorMessage(errorMessage); // set error message in state
       })
   }
 
@@ -55,7 +61,9 @@ const Login = () => {
         navigate(from, { replace: true });
       })
       .catch(error => {
-        console.log(error);
+        const errorMessage = error.message; // extract error message
+      console.log(errorMessage);
+      setErrorMessage(errorMessage); // set error message in state
       })
 
   }
@@ -69,6 +77,11 @@ const Login = () => {
           <div className="card">
             <div className="card-body">
               <h4 className="card-title mb-4">Login</h4>
+              {errorMessage && (
+                <div className="alert alert-warning" role="alert">
+                  {errorMessage}
+                </div>
+              )}
               <form onSubmit={handleLogin}>
                 <div className="mb-3">
                   <label htmlFor="email" className="form-label">Email</label>
@@ -76,13 +89,14 @@ const Login = () => {
                 </div>
                 <div className="mb-3">
                   <label htmlFor="password" className="form-label">Password</label>
-                  <input type="password" className="form-control" id="password" name="password" placeholder="Enter your password" required />
+                  <input type="password" className="form-control" id="password" name="password" maxLength="6" placeholder="Enter your password" required />
                 </div>
                 <small>New Here? <Link to='/register'>Register</Link> Now!</small> <br /> <br />
                 <button type="submit" className="btn btn-primary">Login</button> <br /> <br />
 
-                <Link><FaGoogle onClick={handleGoogleSignIn}></FaGoogle></Link>
-                <Link className='ms-3'><FaGithub onClick={handleGithubSignIn} ></FaGithub></Link>
+                <small className='me-2'>Sign in with: </small>
+                <Link><FaGoogle onClick={handleGoogleSignIn} className='iconSize'></FaGoogle></Link>
+                <Link className='ms-3'><FaGithub onClick={handleGithubSignIn} className='iconSize' ></FaGithub></Link>
 
 
 

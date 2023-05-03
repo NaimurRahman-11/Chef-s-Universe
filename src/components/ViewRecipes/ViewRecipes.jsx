@@ -59,14 +59,14 @@ const ViewRecipes = () => {
                             <p className="card-text">Cooking Method: {recipe.CookingMethod}</p>
                             <div className='d-flex align-items-center'>
                             <Rating
-                              placeholderRating={recipe.rating.number}
+                              placeholderRating={recipe.rating?.number}
                               readonly
                             emptySymbol={<FaRegStar></FaRegStar>}
                             placeholderSymbol={<FaStar className='text-warning'></FaStar>}
                               fullSymbol={<FaStar></FaStar>}>
                               
                             </Rating>
-                            <span className='ms-3 mt-1'>{ Math.round(recipe.rating?.number || 0)}</span>
+                            <span className='ms-3 mt-1'>{recipe.rating?.number}</span>
                             </div>
                                     
                                     
