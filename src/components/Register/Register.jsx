@@ -34,12 +34,12 @@ const Register = () => {
                 form.reset();
                 setLoading(false)
                 setPasswordError(false);
-                console.log('code worked')
+                
 
                 Swal.fire({
-                    position: 'top-end',
+                    position: 'center',
                     icon: 'success',
-                    title: 'Your work has been saved',
+                    title: 'Registration Successful!',
                     showConfirmButton: false,
                     timer: 1500
                 })
