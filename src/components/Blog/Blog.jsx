@@ -32,7 +32,18 @@ A controlled component receives its current value and an update callback via pro
                 
 
                 <h3 className="mt-5">2. How to validate React props using PropTypes?</h3>
-                <p></p>
+                <p className="justify">React is a JavaScript library used for creating interactive web frontend applications. It is one of the most popular libraries because of its easy-to-use API.
+
+We combine components into an app by passing data from parent components to child components. To do this, we pass data with props. Props are like HTML attributes, but they can contain dynamic data.
+
+                    A parent component passes props down to child components. And child components receive them. We can pass any data as props. Therefore, we need a way to validate their data type so that the child component gets what they expect. <br /> <br />
+                
+                    We define the FooComponent which takes several props.
+
+And we validate them by setting the propTypes property of the FooComponent component to an object that has the names of the props to validate as the keys. And the corresponding values are the data type of the props.
+
+Since we didn’t specify that the props are required explicitly, they are optional.
+                </p>
 
 
                 <h3 className="mt-5">3. Tell us the difference between nodejs and express js.</h3>
