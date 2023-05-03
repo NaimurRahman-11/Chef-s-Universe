@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProvider';
 import './Register.css'
+import Swal from 'sweetalert2';
 
 const Register = () => {
 
@@ -9,7 +10,7 @@ const Register = () => {
     const [loading, setLoading] = React.useState(false)
 
     const [passwordError, setPasswordError] = React.useState(false) // add passwordError state
-    
+
     const navigate = useNavigate()
     const handleRegister = event => {
         event.preventDefault();
@@ -33,7 +34,15 @@ const Register = () => {
                 form.reset();
                 setLoading(false)
                 setPasswordError(false);
+                console.log('code worked')
 
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Your work has been saved',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
                 navigate('/')
 
             })
@@ -41,7 +50,7 @@ const Register = () => {
                 setLoading(false)
 
                 console.log(error);
-                
+
             })
 
     }

@@ -3,6 +3,7 @@ import "./HomePage.css";
 import { Form, Link } from "react-router-dom";
 import { Button } from "bootstrap";
 
+import LazyLoad from 'react-lazy-load';
 
 
 const HomePage = () => {
@@ -36,16 +37,19 @@ const HomePage = () => {
         </div>
       </div>
 
-      
-      
+
+
       <h1 className="text-center mt-5">Meet Our Chef's</h1>
       <div className="d-flex justify-content-center mt-5">
-        
+
         <div className="row row-cols-1 row-cols-md-3 mt-3">
           {chef.map(chef => (
             <div key={chef.id} className="col mb-4 ">
               <div className="card cardCenter">
-                <img src={chef.ChefPicture} className="card-img-top img-fluid" alt="..." />
+                <LazyLoad>
+                  <img src={chef.ChefPicture} className="card-img-top img-fluid" alt="..." />
+                </LazyLoad>
+
                 <div className="card-body">
                   <h5 className="card-title mb-3">{chef.name}</h5>
 
@@ -71,14 +75,14 @@ const HomePage = () => {
           <div className="row">
             <div className="col">
               <img src="https://c.ekstatic.net/ecl/logos/skywards/partners/le-meridien-logo-275x175.png" alt="" />
-              
+
             </div>
             <div className="col">
-            <img src="https://c.ekstatic.net/ecl/logos/skywards/partners/le-meridien-logo-275x175.png" alt="" />
+              <img src="https://c.ekstatic.net/ecl/logos/skywards/partners/le-meridien-logo-275x175.png" alt="" />
             </div>
           </div>
-          
-         
+
+
         </div>
 
       </div>
@@ -87,7 +91,7 @@ const HomePage = () => {
 
       <section className="container mt-5 mb-5">
         <div className="text-center mb-4">
-        <img src="https://cdn.dribbble.com/users/242557/screenshots/6134238/untitled-2.gif" alt="" className="size img-fluid" />
+          <img src="https://cdn.dribbble.com/users/242557/screenshots/6134238/untitled-2.gif" alt="" className="size img-fluid" />
           <h1>Subscribe To Us</h1>
           <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt tempore est debitis non nesciunt velit, modi laborum, magnam et illo repudiandae. Iste ea iusto error ipsa ipsam cupiditate consequuntur maxime!</small>
         </div>
@@ -97,7 +101,7 @@ const HomePage = () => {
               <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
               <button className="btn btn-primary mt-3">Subscribe</button>
 
-             
+
             </div>
           </div>
         </div>

@@ -29,7 +29,7 @@ const Header = () => {
     }, []);
 
     return (
-        <div className=''>
+        <div className='no-printme'>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
                     <Link to="/" className="navbar-brand"><img src="https://images.vexels.com/media/users/3/224164/isolated/preview/841be8b857448d1e2d59637111a8b4fa-chef-hat-clothing-logo.png" alt="" className='logo' /> Chef's Universe</Link>

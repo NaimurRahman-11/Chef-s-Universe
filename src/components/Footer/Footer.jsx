@@ -2,8 +2,8 @@ import React from 'react';
 import { FaFacebook, FaInstagram, FaLinkedin, FaPinterest, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
-    return (
-        <footer className="bg-body-tertiary text-center">
+  return (
+    <footer className="bg-body-tertiary text-center no-printme">
       <div className="container">
         <div className="row">
           <div className="col-lg-6">
@@ -29,19 +29,19 @@ const Footer = () => {
               </li>
               <li className="list-inline-item">
                 <a href="#">
-                 <FaInstagram></FaInstagram>
+                  <FaInstagram></FaInstagram>
                 </a>
-                </li>
-                
-                <li className="list-inline-item">
+              </li>
+
+              <li className="list-inline-item">
                 <a href="#">
-                 <FaLinkedin></FaLinkedin>
+                  <FaLinkedin></FaLinkedin>
                 </a>
-                </li>
-                
-                <li className="list-inline-item">
+              </li>
+
+              <li className="list-inline-item">
                 <a href="#">
-                 <FaPinterest></FaPinterest>
+                  <FaPinterest></FaPinterest>
                 </a>
               </li>
             </ul>
@@ -56,7 +56,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-    );
+  );
 };
 
 export default Footer;
