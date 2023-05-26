@@ -69,6 +69,8 @@ const ViewRecipes = () => {
                             <span className='ms-3 mt-1'>{recipe.rating?.number}</span>
                             </div>
                                     
+
+                            {/* This is for testing */}
                                     
                                 </div>
                                 <div className="card-footer text-center">
